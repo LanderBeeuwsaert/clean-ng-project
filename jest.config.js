@@ -11,13 +11,15 @@ module.exports = {
       tsconfig: '<rootDir>/tsconfig-esm.spec.json',
     },
   },
+  resolver: '<rootDir>/jest.resolver.js',
   moduleNameMapper: {
     ...pathsToModuleNameMapper(paths, { prefix: '<rootDir>' }),
     tslib: 'tslib/tslib.es6.js',
   },
   setupFilesAfterEnv: ['<rootDir>/spec/config/setup-jest.ts'],
   moduleFileExtensions: ['ts', 'html', 'js', 'json', 'mjs'],
-  transformIgnorePatterns: ['node_modules/(?!.*\\.mjs$)'],
+  transformIgnorePatterns: ['node_modules/(?!@angular|@ngrx)'],
+  // transformIgnorePatterns: ['node_modules/(?!.*\\.mjs$)'],
 };
 
 // const { pathsToModuleNameMapper } = require('ts-jest');
