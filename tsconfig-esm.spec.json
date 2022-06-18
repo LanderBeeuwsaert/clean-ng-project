@@ -1,0 +1,17 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "outDir": "./out-tsc/spec",
+    "types": [
+      "jest",
+      "node"
+    ],
+    "esModuleInterop": false,
+    "emitDecoratorMetadata": true
+  },
+  "files": [
+    "src/test.ts",
+    "src/polyfills.ts"
+  ]
+}
