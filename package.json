@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "e2e": "node --experimental-loader esbuild-node-loader ./playwright-fail.ts"
   },
   "private": true,
   "dependencies": {
@@ -28,7 +29,7 @@
     "ag-grid-community": "28.2.0"
   },
   "devDependencies": {
-    "playwright": "1.23.4",
+    "playwright": "1.26.0",
     "@angular-builders/jest": "14.0.1",
     "@angular-devkit/build-angular": "14.2.5",
     "@angular-eslint/builder": "14.1.2",
@@ -45,7 +46,6 @@
     "karma-coverage": "2.2.0",
     "karma-jasmine": "5.1.0",
     "karma-jasmine-html-reporter": "2.0.0",
-    "typescript": "4.7.4",
     "@angular/language-service": "14.2.5",
     "@bazel/typescript": "5.7.0",
     "@types/angular": "1.8.4",
